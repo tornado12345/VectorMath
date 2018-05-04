@@ -2,7 +2,7 @@
 //  VectorMath+SceneKit.swift
 //  VectorMath
 //
-//  Version 0.3
+//  Version 0.3.2
 //
 //  Created by Nick Lockwood on 24/11/2014.
 //  Copyright (c) 2014 Nick Lockwood. All rights reserved.
@@ -31,7 +31,7 @@
 //  3. This notice may not be removed or altered from any source distribution.
 //
 
-#if os(iOS)
+#if os(iOS) || os(tvOS)
 typealias SCNFloat = Float
 #else
 typealias SCNFloat = CGFloat
@@ -39,15 +39,15 @@ typealias SCNFloat = CGFloat
 
 import SceneKit
 
-//MARK: SceneKit extensions
+// MARK: SceneKit extensions
 
-extension SCNVector3 {
+public extension SCNVector3 {
     init(_ v: Vector3) {
         self.init(x: SCNFloat(v.x), y: SCNFloat(v.y), z: SCNFloat(v.z))
     }
 }
 
-extension SCNVector4 {
+public extension SCNVector4 {
     init(_ v: Vector4) {
         self.init(x: SCNFloat(v.x), y: SCNFloat(v.y), z: SCNFloat(v.z), w: SCNFloat(v.w))
     }
@@ -55,7 +55,7 @@ extension SCNVector4 {
 
 #if os(iOS) // SCNMatrix4 = CATransform3D on Mac
 
-extension SCNMatrix4 {
+public extension SCNMatrix4 {
     init(_ m: Matrix4) {
         self.init(
             m11: SCNFloat(m.m11), m12: SCNFloat(m.m12), m13: SCNFloat(m.m13), m14: SCNFloat(m.m14),
@@ -68,21 +68,21 @@ extension SCNMatrix4 {
 
 #endif
 
-extension SCNQuaternion {
-    init(_ q:Quaternion) {
+public extension SCNQuaternion {
+    init(_ q: Quaternion) {
         self.init(x: SCNFloat(q.x), y: SCNFloat(q.y), z: SCNFloat(q.z), w: SCNFloat(q.w))
     }
 }
 
-//MARK: VectorMath extensions
+// MARK: VectorMath extensions
 
-extension Vector3 {
+public extension Vector3 {
     init(_ v: SCNVector3) {
         self.init(x: Scalar(v.x), y: Scalar(v.y), z: Scalar(v.z))
     }
 }
 
-extension Vector4 {
+public extension Vector4 {
     init(_ v: SCNVector4) {
         self.init(x: Scalar(v.x), y: Scalar(v.y), z: Scalar(v.z), w: Scalar(v.w))
     }
@@ -90,7 +90,7 @@ extension Vector4 {
 
 #if os(iOS) // SCNMatrix4 = CATransform3D on Mac
 
-extension Matrix4 {
+public extension Matrix4 {
     init(_ m: SCNMatrix4) {
         self.init(
             m11: Scalar(m.m11), m12: Scalar(m.m12), m13: Scalar(m.m13), m14: Scalar(m.m14),
@@ -103,7 +103,7 @@ extension Matrix4 {
 
 #endif
 
-extension Quaternion {
+public extension Quaternion {
     init(_ q: SCNQuaternion) {
         self.init(x: Scalar(q.x), y: Scalar(q.y), z: Scalar(q.z), w: Scalar(q.w))
     }
