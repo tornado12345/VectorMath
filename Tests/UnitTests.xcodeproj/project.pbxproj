@@ -16,6 +16,8 @@
 		01B6A6641A23F08000DA8FB3 /* VectorMath+SceneKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B6A6611A23F08000DA8FB3 /* VectorMath+SceneKit.swift */; };
 		01B6A6651A23F08000DA8FB3 /* VectorMath+Quartz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B6A6621A23F08000DA8FB3 /* VectorMath+Quartz.swift */; };
 		01B6A6661A23F08000DA8FB3 /* VectorMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B6A6631A23F08000DA8FB3 /* VectorMath.swift */; };
+		DC1BCD7320A0F26700B75CCA /* QuartzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BCD7220A0F26600B75CCA /* QuartzTests.swift */; };
+		DC1BCD7420A0F26700B75CCA /* QuartzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BCD7220A0F26600B75CCA /* QuartzTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		01B6A6611A23F08000DA8FB3 /* VectorMath+SceneKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VectorMath+SceneKit.swift"; sourceTree = "<group>"; };
 		01B6A6621A23F08000DA8FB3 /* VectorMath+Quartz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VectorMath+Quartz.swift"; sourceTree = "<group>"; };
 		01B6A6631A23F08000DA8FB3 /* VectorMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorMath.swift; sourceTree = "<group>"; };
+		DC1BCD7220A0F26600B75CCA /* QuartzTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuartzTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 		01B6A6531A23EF1400DA8FB3 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				DC1BCD7220A0F26600B75CCA /* QuartzTests.swift */,
 				01B6A6561A23EF1400DA8FB3 /* VectorMathTests.swift */,
 				01B6A6551A23EF1400DA8FB3 /* iOS-Info.plist */,
 				015FC9771CF6E72100C9A42A /* Mac-Info.plist */,
@@ -131,16 +135,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Nick Lockwood";
 				TargetAttributes = {
 					015FC96D1CF6E68400C9A42A = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0930;
 					};
 					01B6A64F1A23EF1400DA8FB3 = {
 						CreatedOnToolsVersion = 6.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0940;
 						TestTargetID = 01B6A63A1A23EF1400DA8FB3;
 					};
 				};
@@ -191,6 +195,7 @@
 				015FC97C1CF6E8EA00C9A42A /* VectorMath+Quartz.swift in Sources */,
 				015FC97D1CF6E90400C9A42A /* VectorMath+SceneKit.swift in Sources */,
 				015FC9761CF6E6CA00C9A42A /* VectorMathTests.swift in Sources */,
+				DC1BCD7420A0F26700B75CCA /* QuartzTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +207,7 @@
 				01B6A6641A23F08000DA8FB3 /* VectorMath+SceneKit.swift in Sources */,
 				01B6A6651A23F08000DA8FB3 /* VectorMath+Quartz.swift in Sources */,
 				01B6A6571A23EF1400DA8FB3 /* VectorMathTests.swift in Sources */,
+				DC1BCD7320A0F26700B75CCA /* QuartzTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +228,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.charcoaldesign.MacTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -241,7 +248,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.charcoaldesign.MacTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -253,14 +261,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -288,6 +304,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -299,14 +316,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -326,6 +351,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -346,7 +372,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charcoaldesign.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = iOSTests;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -362,7 +389,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charcoaldesign.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = iOSTests;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
